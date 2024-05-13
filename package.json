@@ -1,0 +1,34 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test -- --record --key 73da0016-ad57-45a2-bf02-dffd2e6ab267 --reporter mochawesome"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-Reports/results.json"
+    }
+  },
+  "author": "UjjawalSingh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "chai": "^5.1.0",
+    "cypress": "^13.6.6",
+    "cypress-iframe": "^1.0.1",
+    "json-loader": "^0.5.7",
+    "mocha": "^10.3.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "neat-csv": "5.1.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@cypress/browserify-preprocessor": "latest"
+  }
+}
